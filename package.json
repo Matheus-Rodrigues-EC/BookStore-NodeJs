@@ -1,0 +1,25 @@
+{
+  "name": "projetao-bookstore-back",
+  "version": "1.0.0",
+  "description": "Back-End do projeto BookStore",
+  "main": "./scr/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matt-Rodrigues-EC/Projetao-BookStore-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matt-Rodrigues-EC/Projetao-BookStore-back/issues"
+  },
+  "homepage": "https://github.com/Matt-Rodrigues-EC/Projetao-BookStore-back#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
