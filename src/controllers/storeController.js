@@ -16,8 +16,9 @@ const loadStore = async (req, res) => {
     }
     
     try{   
-        sales = await db.collection("historic").find().toArray();
-        if(!sales) return res.status().send();
+        const list = await db.collection("historic").find().toArray();
+        if(!list) return res.status(404).send("Nada encontrado");
+        sales = list.slice(-3).reverse();
         const DATA = {user, sales};
         return res.status(200).send(DATA);
     }catch(error){
