@@ -8,6 +8,6 @@ const store = express();
 store.use(express.json());
 store.use(cors());
 
-store.get("/livros", loadStore);
+store.get("/loja", loadStore);
 
 export default store;

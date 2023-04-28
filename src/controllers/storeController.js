@@ -5,6 +5,7 @@ import dayjs from "dayjs";
 const loadStore = async (req, res) => {
 
     const name = "Matt Rodrigues"
+    const userId = "06021998";
     let user;
     let sales;
     try{
@@ -16,7 +17,7 @@ const loadStore = async (req, res) => {
     }
     
     try{   
-        const list = await db.collection("historic").find().toArray();
+        const list = await db.collection("historic").find({userId: userId}).toArray();
         if(!list) return res.status(404).send("Nada encontrado");
         sales = list.slice(-3).reverse();
         const DATA = {user, sales};
