@@ -7,6 +7,8 @@ dotenv.config();
 import store from "./routes/storeRoutes.js";
 import myStore from "./routes/myStoreRoutes.js";
 import add from "./routes/addBookRoutes.js";
+// import
+import historic from "./routes/historicRoutes.js";
 
 const app = express()
 app.use(cors())
@@ -23,6 +25,8 @@ app.use(router)
 app.use(store);
 app.use(myStore);
 app.use(add);
+// app.use();
+app.use(historic);
 // ===============
 
 app.listen(process.env.PORT, () => {
