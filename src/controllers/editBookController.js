@@ -14,20 +14,13 @@ const getEditBook =  async(req, res) => {
 }
 
 const putEditBook = async (req, res) => {
-    const idBook = req.headers.id;
-    const userId = "06021998"
-    const titulo = "Frenesi: Histórias de duplo terror";
-    const autor = "Heloísa Seixas";
-    const genero = "Suspense";
-    const resumo = "É uma atraente e assustadora incursão na literatura de mistério e de suspense";
-    const capa = "Brochura";
-    const paginas = "108";
-    const valor = 19.50;
-    
+    const idBook = req.body.headers.id;
+    const {titulo, imagem, autor, genero, resumo, capa, paginas, valor} = req.body.body
+    // console.log(req.body.body);
     try{
         await db.collection("books").updateOne({_id: new ObjectId(idBook)}, {$set: {
-            userId: userId,
             titulo: titulo,
+            imagem: imagem,
             autor: autor,
             genero: genero,
             resumo:  resumo,
