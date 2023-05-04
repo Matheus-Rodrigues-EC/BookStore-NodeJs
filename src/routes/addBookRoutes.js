@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 
-import addBook from './../controllers/addBookController.js';
+import addBook from "../controllers/AddBookController.js"
 
 const add = express();
 add.use(express.json());
